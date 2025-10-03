@@ -25,12 +25,12 @@ class UtilisateurController extends Controller
 
 
     // ✅ Afficher la page  des  Utilisateurs
-    public final function page ()
+    public final function index ()
     {
 
         try {
-            $utilisateurs = $this->utilisateurRepository->liste();
-            return view('admin.utilisateur.index',  compact('utilisateurs'));
+            $utilisateurs = $this->utilisateurRepository->listeUtilisateurs();
+            return view('utilisateur.page',  compact('utilisateurs'));
         } catch (Exception $e) {
             return response()->json(['message' => 'Erreur lors du chargement des Utilisateurs.'], 500);
         }

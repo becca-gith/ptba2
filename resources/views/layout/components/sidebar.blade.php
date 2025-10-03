@@ -6,7 +6,7 @@
 
                 <!-- TABLEAU DE BORD -->
                 
-                <li class="submenu">
+                <li class="">
                     <a href="{{ url('/') }}">
                         <i class="ti ti-restaurant fs-16 me-2"></i>
                         <span>TABLEAU DE BORD </span>
@@ -17,7 +17,7 @@
 
 
                 <!-- PTBA -->
-                <li class="submenu">
+                <li class="">
                     <a href="{{ url('/ptbas/index') }}">
                         <i class="ti ti-restaurant fs-16 me-2"></i>
                         <span>PTBA</span>
@@ -27,7 +27,7 @@
                 </li>
 
                 <!-- OPERATIONS -->
-                <li class="submenu">
+                <li class="">
                     <a href="{{ url('/operations/index') }}">
                         <i class="ti ti-chart-bar fs-16 me-2"></i>
                         <span>OPERATIONS</span>
@@ -37,7 +37,7 @@
                 </li>
                 
                 <!-- CAISSE -->
-                <li class="submenu">
+                <li class="">
                     <a href="{{ url('/decaissements/index') }}">
                         <i class="ti ti-settings fs-16 me-2"></i>
                         <span>DECAISSEMENTS </span>
@@ -47,7 +47,7 @@
                 </li>
 
                 <!-- ENTREE DE FONDS -->
-                <li class="submenu">
+                <li class="">
                     <a href="{{ url('/produits') }}">
                         <i class="ti ti-coin fs-16 me-2"></i>
                         <span>ENTREE DE FONDS </span>

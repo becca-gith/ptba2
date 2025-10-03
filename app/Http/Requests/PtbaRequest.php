@@ -30,8 +30,8 @@ class PtbaRequest extends FormRequest
                 Rule::unique('ptbas', 'libelle')->ignore($ptbaId),
             ],
             'annee_id' => 'required|integer|exists:annees,id',
-            'type' => 'required|integer|in:0,1,2', // à adapter selon les valeurs possibles
-            'utilisateur_id' => 'nullable|integer|exists:utilisateurs,id',
+            'type' => 'required|integer|in:1,2', // à adapter selon les valeurs possibles
+            
 
         ];
     }
@@ -55,8 +55,7 @@ class PtbaRequest extends FormRequest
             'type.integer' => 'Le type doit être un entier.',
             'type.in' => 'Le type doit être parmi les valeurs autorisées.',
 
-            'utilisateur_id.integer' => 'L’utilisateur doit être un entier.',
-            'utilisateur_id.exists' => 'L’utilisateur sélectionné est invalide.',
+           
 
           
         ];

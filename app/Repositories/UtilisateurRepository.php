@@ -14,6 +14,25 @@ class UtilisateurRepository extends BaseRepository implements UtilisateurReposit
     }
 
 
+    
+    public function listeUtilisateurs(): array
+{
+    return $this->model
+        ->where('etat', TypeStatus::ACTIF)
+        ->orderBy('created_at', 'desc') // tri décroissant par date de création
+        ->get()
+        ->map(function ($utilisateur) {
+            return [
+                'id'              => $utilisateur->id,
+                'nom_prenom'      => $utilisateur->nom_prenom ?? null,
+                'telephone'       => $utilisateur->telephone ?? null,
+                'login_utilisateur' => $utilisateur->login_utilisateur ?? null,
+                'libelle_role'    => \App\Types\Role::label($utilisateur->role) ?? null,
+            ];
+        })
+        ->toArray();
+}
+
 
     public function authenticate(array $credentials): array
 {

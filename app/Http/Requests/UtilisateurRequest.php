@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Foundation\Http\FormRequest;
 
 class UtilisateurRequest extends FormRequest
 {
@@ -20,7 +20,7 @@ class UtilisateurRequest extends FormRequest
      */
     public function rules(): array
     {
-        $utilisateurId = $this->route('utilisateur'); // récupère l’ID depuis la route /utilisateurs/{utilisateur}
+        $utilisateurId = $this->route('id'); // récupère l’ID depuis la route /utilisateurs/{id}
 
         return [
             'nom_prenom' => 'required|string|max:255',
@@ -40,11 +40,10 @@ class UtilisateurRequest extends FormRequest
             ],
 
             'mot_passe' => $this->isMethod('post')
-                ? 'required|string|min:6' // en création obligatoire
-                : 'nullable|string|min:6', // en modification facultatif (si non changé)
+                ? 'required|string|min:6|confirmed' // création obligatoire + confirmation
+                : 'nullable|string|min:6|confirmed',  // modification facultative + confirmation
 
             'role' => 'required|integer|in:0,1,2', // à adapter selon tes rôles
-
         ];
     }
 
@@ -65,11 +64,11 @@ class UtilisateurRequest extends FormRequest
 
             'mot_passe.required' => 'Le mot de passe est obligatoire.',
             'mot_passe.min' => 'Le mot de passe doit contenir au moins 6 caractères.',
+            'mot_passe.confirmed' => 'La confirmation du mot de passe ne correspond pas.',
 
             'role.required' => 'Le rôle est obligatoire.',
             'role.in' => 'Le rôle doit être parmi les valeurs autorisées.',
-
-           
         ];
     }
 }
+

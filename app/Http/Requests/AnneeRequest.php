@@ -20,7 +20,7 @@ class AnneeRequest extends FormRequest
      */
     public function rules(): array
     {
-        $anneeId = $this->route('id'); // récupère l'ID depuis la route (ex: /annees/{annee})
+        $anneeId = $this->route('id'); // récupère l'ID depuis la route (ex: /annees/{id})
 
         return [
             'libelle' => [

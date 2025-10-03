@@ -21,25 +21,34 @@ class PtbaController extends Controller
 
 
     // ✅ Afficher la page  des  Ptbas
-    public final function page ()
+    public function index(\Illuminate\Http\Request $request)
     {
+      
+            // Récupérer les filtres éventuels depuis la requête
+            
+            
+            $filters = $request->only(['annee_id', 'type', 'utilisateur_id', 'etat']);
 
-        try {
+            // Récupération des données
+            $ptbas = $this->ptbaRepository->listePtbas($filters);
 
-            $ptbas = $this->ptbaRepository->liste();
-            return view('admin.ptba.page',  compact('ptbas'));
-        } catch (Exception $e) {
-            return response()->json(['message' => 'Erreur lors du chargement des Ptbas.'], 500);
-        }
+           
+            // Sinon → vue
+            return view('ptba.page', compact('ptbas'));
 
-
+        
     }
+
+
 
 
     public final function store(PtbaRequest $request): JsonResponse
     {
         try {
+            
             $data = $request->validated();
+            
+            
 
             $ptba = $this->ptbaRepository->ajouter($data);
 
@@ -56,7 +65,7 @@ class PtbaController extends Controller
     {
         try {
 
-            $ptba = $this->PtbaRepository->rechercher($id);
+            $ptba = $this->ptbaRepository->rechercher($id);
 
             if (!$ptba) {
                 return response()->json(['message' => 'Ptba non trouvé.'], 404);
@@ -75,7 +84,7 @@ class PtbaController extends Controller
             $ptba = $this->ptbaRepository->modifier($id, $data);
             return response()->json([
                 'message' => 'Ptba mis à jour avec succès.',
-                'data' => $Ptba
+                'data' => $ptba
             ]);
         } catch (ModelNotFoundException $e) {
             return response()->json(['message' => 'Ptba non trouvé.'], 404);

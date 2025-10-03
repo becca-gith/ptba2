@@ -4505,7 +4505,7 @@ h6,
 }
 
 .text-primary {
-  color: #FF0000 !important;
+  color: #006a4e !important;
   opacity: 1;
 }
 .text-primary.text-opacity-75 {
@@ -25776,7 +25776,7 @@ body.layout-mode-rtl .nav-list::before {
   flex-direction: inherit;
   text-align: left;
   padding: 7px 8px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   display: block;
   position: relative;

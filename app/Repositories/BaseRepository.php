@@ -37,6 +37,17 @@ abstract class BaseRepository implements BaseRepositoryInterface
     {
         $data['created_at'] = Carbon::now();
         $data['updated_at'] = Carbon::now();
+        
+        // Vérifier si le modèle possède la colonne "utilisateur_id"
+        if (Schema::hasColumn($this->model->getTable(), 'utilisateur_id')) {
+            // Récupérer l'année en cours depuis la session
+            $session = session()->get('LoginUser');
+            $utilisateur_id = $session['compte']['id'] ?? null;
+
+            if ($utilisateur_id) {
+                $data['utilisateur_id'] = $utilisateur_id;
+            }
+        }
 
         return $this->model->create($data);
     }
