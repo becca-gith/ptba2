@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="page-title">
-                    <h4 id="modalPtbaLabel">Ajouter un PTBA</h4>
+                    <h4 id="modalPtbaLabel">Ajouter un PTBA  </h4>
                 </div>
                 <button type="button" class="close bg-danger text-white fs-16" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -33,7 +33,7 @@
                         <select name="annee_id" id="annee_id" class="form-select" required>
                             <option value="">-- Sélectionnez une année --</option>
                             @foreach($annees as $annee)
-                                <option value="{{ $annee->id }}">{{ $annee->libelle }}</option>
+                                <option value="{{ $annee['id'] }}">{{ $annee['libelle'] }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -45,8 +45,8 @@
                         </label>
                         <select name="type" id="type" class="form-select" required>
                             <option value="">-- Sélectionnez un type --</option>
-                            <option value="1">Type 1</option>
-                            <option value="2">Type 2</option>
+                            <option value="1">Sur projét </option>
+                            <option value="2">Hors projet </option>
                         </select>
                     </div>
 
