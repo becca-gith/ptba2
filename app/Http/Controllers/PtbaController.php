@@ -23,20 +23,22 @@ class PtbaController extends Controller
     // ✅ Afficher la page  des  Ptbas
     public function index(\Illuminate\Http\Request $request)
     {
-      
-            // Récupérer les filtres éventuels depuis la requête
-            
-            
-            $filters = $request->only(['annee_id', 'type', 'utilisateur_id', 'etat']);
 
-            // Récupération des données
-            $ptbas = $this->ptbaRepository->listePtbas($filters);
-
-           
             // Sinon → vue
-            return view('ptba.page', compact('ptbas'));
+            return view('ptba.page');
 
-        
+
+    }
+
+
+    // ✅ Afficher la page   de creation de ptba
+    public function create(\Illuminate\Http\Request $request)
+    {
+
+        // Sinon → vue
+        return view('ptba.ajouter');
+
+
     }
 
 
@@ -45,10 +47,10 @@ class PtbaController extends Controller
     public final function store(PtbaRequest $request): JsonResponse
     {
         try {
-            
+
             $data = $request->validated();
-            
-            
+
+
 
             $ptba = $this->ptbaRepository->ajouter($data);
 

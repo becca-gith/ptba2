@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('activites', function (Blueprint $table) {
             $table->id();
 
+             $table->string('code')->nullable();
              $table->string('libelle')->nullable();
-             $table->float('montant')->nullable();
+             $table->float('cout')->nullable();
             $table->bigInteger('ptba_id')->nullable();
             $table->bigInteger('composant_id')->nullable();
              $table->bigInteger('utilisateur_id')->nullable();

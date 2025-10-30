@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('ptbas', function (Blueprint $table) {
             $table->id();
 
-             $table->string('libelle')->nullable();
+
             $table->bigInteger('annee_id')->nullable();
-            $table->tinyInteger('type')->nullable();
+            $table->bigInteger('projet_id')->nullable();
              $table->bigInteger('utilisateur_id')->nullable();
             $table->integer('etat')->default(1);
-            
+
             $table->timestamps();
         });
     }

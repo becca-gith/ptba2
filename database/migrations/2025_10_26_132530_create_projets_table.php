@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('entrees', function (Blueprint $table) {
+        Schema::create('projets', function (Blueprint $table) {
             $table->id();
-
             $table->string('libelle')->nullable();
-             $table->float ('montant')->nullable();
-             $table->text ('motif')->nullable();
-             $table->date('date_entre')->nullable();
+            $table->text('description')->nullable();
 
-            $table->bigInteger('utilisateur_id')->nullable();
             $table->integer('etat')->default(1);
             $table->timestamps();
         });
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('entrees');
+        Schema::dropIfExists('projets');
     }
 };

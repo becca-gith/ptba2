@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Comptabilite;
+namespace App\Http\Controllers;
 
 use App\Http\Requests\OperationRequest;
 use App\Repositories\Interfaces\OperationRepositoryInterface;
@@ -24,13 +24,8 @@ class OperationController extends Controller
     public final function index ()
     {
 
-        try {
-            $operations = $this->operationRepository->liste();
-            return view('admin.operation.index',  compact('operations'));
 
-        } catch (Exception $e) {
-            return response()->json(['message' => 'Erreur lors du chargement des Operations.'], 500);
-        }
+            return view('operation.page');
 
 
     }

@@ -2,7 +2,7 @@
 
 @section('title')
 
-    PTBA  | Ptbas
+    PTBA  | Operations
 
 @endsection
 
@@ -14,7 +14,6 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 @endsection
 
 @section('contenu')
@@ -24,8 +23,8 @@
         <div class="page-header">
             <div class="add-item d-flex">
                 <div class="page-title">
-                    <h4 class="fw-bold">Ptbas    </h4>
-                    <h6>Liste des ptbas   </h6>
+                    <h4 class="fw-bold">Operations    </h4>
+                    <h6>Liste des operations   </h6>
                 </div>
             </div>
             <ul class="table-top-head">
@@ -38,14 +37,13 @@
                 </li>
             </ul>
             <div class="page-btn">
-                <a href="{{ url('/ptbas/create') }}" class="btn btn-primary" id="lancerPtba"><i class="ti ti-circle-plus me-1"></i>Ajouter </a>
+                <a href="#" class="btn btn-primary" id="lancerOperation"><i class="ti ti-circle-plus me-1"></i>Ajouter </a>
             </div>
         </div>
 
-        @include('ptba.partial.liste')
-        <!-- /product list -->
+        @include('operation.partial.liste')
 
-        <!-- /product list -->
+
     </div>
 
 
@@ -69,23 +67,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 
-
-
-
-
-    <!-- Initialisation des tooltips Bootstrap -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl)
-            });
-        });
-    </script>
-
-
-
-    <script src="{{asset('pages')}}/ptba.js" type="text/javascript"></script>
+    <script src="{{asset('pages')}}/operation.js" type="text/javascript"></script>
 
 
 @endsection

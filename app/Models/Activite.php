@@ -12,8 +12,9 @@ class Activite extends Model
     protected $table = 'activites';
 
     protected $fillable = [
+        'code',
         'libelle',
-        'montant',
+        'cout',
         'ptba_id',
         'composant_id',
         'utilisateur_id',

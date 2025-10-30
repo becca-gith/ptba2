@@ -13,9 +13,9 @@ class Ptba extends Model
     protected $table = 'ptbas';
 
     protected $fillable = [
-        'libelle',
+
         'annee_id',
-        'type',
+        'projet_id',
         'utilisateur_id',
         'etat',
     ];
@@ -36,7 +36,7 @@ class Ptba extends Model
         return $this->belongsTo(IUtilisateur::class, 'utilisateur_id');
         // ⚠️ Si ton modèle utilisateur s’appelle User → change IUtilisateur par User
     }
-    
+
     // ✅ Relation : un PTBA a plusieurs composants
     public function composants()
     {

@@ -14,7 +14,7 @@ class Composant extends Model
     protected $fillable = [
         'libelle',
         'ptba_id',
-        'montant',
+        'financement',
         'utilisateur_id',
         'etat',
     ];

@@ -5,26 +5,32 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Entree extends Model
+class Bailleur extends Model
 {
     use HasFactory;
 
-    protected $table = 'entrees';
+    protected $table = 'operations';
 
     protected $fillable = [
-        'libelle',
-        'montant',
-        'motif',
-        'date_entre',
+        'code',
+        'logo',
+        'sigle',
+        'nom',
+        'email',
         'utilisateur_id',
+     
+      
         'etat',
     ];
 
-    /**
-     * 🔗 Relation avec l’utilisateur
+
+     /**
+     * 🔗 Relation avec l’Utilisateur
      */
     public function utilisateur()
     {
         return $this->belongsTo(Utilisateur::class, 'utilisateur_id');
     }
+
+   
 }

@@ -13,9 +13,11 @@ class Operation extends Model
 
     protected $fillable = [
         'libelle',
+        'montant',
         'statut',
+        'justificatif',
         'date_operation',
-        'activite_id',
+        'utilisateur_id',
         'utilisateur_id',
         'etat',
     ];

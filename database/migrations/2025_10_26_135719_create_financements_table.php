@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('composants', function (Blueprint $table) {
+        Schema::create('financements', function (Blueprint $table) {
             $table->id();
 
 
-             $table->string('libelle')->nullable();
-            $table->bigInteger('ptba_id')->nullable();
-             $table->float('financement')->nullable();
-             $table->bigInteger('utilisateur_id')->nullable();
-
+            $table->float ('montant')->nullable();
+            $table->bigInteger('bailleur_id')->nullable();
+            $table->bigInteger('activite_id')->nullable();
             $table->integer('etat')->default(1);
             $table->timestamps();
         });
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('composants');
+        Schema::dropIfExists('financements');
     }
 };

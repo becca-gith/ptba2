@@ -13,14 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('composants', function (Blueprint $table) {
+        Schema::create('bailleurs', function (Blueprint $table) {
             $table->id();
 
+            $table->string('code')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('sigle')->nullable();
+            $table->string('nom')->nullable();
+            $table->string('email')->nullable();
 
-             $table->string('libelle')->nullable();
-            $table->bigInteger('ptba_id')->nullable();
-             $table->float('financement')->nullable();
-             $table->bigInteger('utilisateur_id')->nullable();
+            $table->bigInteger('utilisateur_id')->nullable();
 
             $table->integer('etat')->default(1);
             $table->timestamps();
@@ -34,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('composants');
+        Schema::dropIfExists('bailleurs');
     }
 };

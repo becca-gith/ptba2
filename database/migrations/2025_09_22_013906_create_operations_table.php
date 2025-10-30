@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
 
             $table->string('libelle')->nullable();
+            $table->float('montant')->nullable();
              $table->tinyInteger('statut')->nullable();
-             $table->datetime('date_operation')->nullable();
+             $table->string('justificatif')->nullable();
+             $table->date('date_operation')->nullable();
               $table->bigInteger('activite_id')->nullable();
 
              $table->bigInteger('utilisateur_id')->nullable();

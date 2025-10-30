@@ -5,7 +5,7 @@ use App\Models\Ptba;
 use App\Repositories\Interfaces\PtbaRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use App\Types\TypeStatus;
-use Illuminate\Support\Facades\DB; 
+use Illuminate\Support\Facades\DB;
 
 class PtbaRepository extends BaseRepository implements PtbaRepositoryInterface
 {
@@ -20,7 +20,7 @@ class PtbaRepository extends BaseRepository implements PtbaRepositoryInterface
      * @param array $filters (annee_id, type, utilisateur_id, etat, etc.)
      * @return \Illuminate\Support\Collection
      */
-   use Illuminate\Support\Facades\DB;
+
 
 public function listePtbas(array $filters = []): array
 {

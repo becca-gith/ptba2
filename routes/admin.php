@@ -34,6 +34,7 @@ Route::post('/annees/delete/{id}', [AnneeController::class, 'destroy'])->name('a
 // 📂 Ptbas
 
 Route::get('/ptbas/index', [PtbaController::class, 'index'])->name('admin_ptba_index');
+Route::get('/ptbas/create', [PtbaController::class, 'create'])->name('admin_ptba_create');
 Route::post('/ptbas/save', [PtbaController::class, 'store'])->name('admin_ptba_store');
 Route::get('/ptbas/modifier/{id}', [PtbaController::class, 'show'])->name('admin_ptba_edit');
 Route::post('/ptbas/update/{id}', [PtbaController::class, 'update'])->name('admin_ptba_update');
