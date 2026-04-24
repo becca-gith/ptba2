@@ -19,13 +19,32 @@
 
                                 <div class="login-userheading text-center mb-4">
                                     <h3><i class="ti ti-login"></i> Connexion à la plateforme</h3>
-                                    <p class="text-muted">Veuillez saisir vos identifiants pour accéder à votre espace.</p>
+                                    <p class="text-muted">Veuillez saisir vos informations pour accéder à votre espace.</p>
+                                </div>
+
+                                <!-- Type de projet -->
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        <i class="ti ti-briefcase"></i> Type de projet <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <select name="type_projet" id="type_projet" class="form-select" required>
+                                            <option value="">-- Sélectionner un projet --</option>
+
+                                            @foreach($projets as $projet)
+                                                <option value="{{ $projet->id }}">
+                                                    {{ $projet->libelle  }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <span class="input-group-text"><i class="ti ti-folder"></i></span>
+                                    </div>
                                 </div>
 
                                 <!-- Login -->
                                 <div class="mb-4">
                                     <label class="form-label fw-semibold">
-                                        <i class="ti ti-user-circle"></i> Identifiant  <span class="text-danger">*</span>
+                                        <i class="ti ti-user-circle"></i> Identifiant <span class="text-danger">*</span>
                                     </label>
                                     <div class="input-group">
                                         <input type="text" name="login_utilisateur" id="login_utilisateur" class="form-control" placeholder="Entrez votre login" required>
@@ -76,7 +95,6 @@
                         </div>
                     </form>
 
-                    <!-- Copyright -->
                     <div class="text-center mt-4 text-muted small">
                         &copy; {{ date('Y') }} <strong>MENV</strong> – Tous droits réservés.
                     </div>
@@ -86,4 +104,5 @@
         </div>
     </div>
 </div>
+
 

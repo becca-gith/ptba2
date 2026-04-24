@@ -16,6 +16,8 @@ class Ptba extends Model
 
         'annee_id',
         'projet_id',
+        'cout',
+
         'utilisateur_id',
         'etat',
     ];

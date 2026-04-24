@@ -6,6 +6,7 @@ class Role
 {
     const UTILISATEUR  = 1;
     const ADMIN = 2;
+    const DIRECTEUR = 3;
 
     /**
      * Retourne tous les roles 
@@ -14,8 +15,9 @@ class Role
     public static function all(): array
     {
         return [
-            self::UTILISATEUR => 'Utilisateur',
+            self::COMPTABLE => 'Comptable',
             self::ADMIN => 'Admin',
+            self::DIRECTEUR => 'Directeur',
         ];
     }
 

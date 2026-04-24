@@ -9,21 +9,21 @@ class Financement extends Model
 {
     use HasFactory;
 
-    protected $table = 'operations';
+    protected $table = 'financements';
 
     protected $fillable = [
         'montant',
         'bailleur_id',
         'activite_id',
-    
-     
-      
+
+
+
         'etat',
     ];
 
 
      /**
-     * 🔗 Relation avec le bailleur 
+     * 🔗 Relation avec le bailleur
      */
     public function bailleur()
     {
@@ -31,14 +31,14 @@ class Financement extends Model
     }
 
 
-    
+
      /**
-     * 🔗 Relation avec l' activité 
+     * 🔗 Relation avec l' activité
      */
     public function activite()
     {
         return $this->belongsTo(Activite::class, 'activite_id');
     }
 
-   
+
 }

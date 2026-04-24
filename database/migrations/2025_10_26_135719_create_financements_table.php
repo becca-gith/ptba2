@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
 
 
-            $table->float ('montant')->nullable();
+            $table->decimal('montant', 15, 2)->nullable();
             $table->bigInteger('bailleur_id')->nullable();
             $table->bigInteger('activite_id')->nullable();
             $table->integer('etat')->default(1);

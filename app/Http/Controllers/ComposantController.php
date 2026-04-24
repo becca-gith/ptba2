@@ -21,16 +21,13 @@ class ComposantController extends Controller
 
 
     // ✅ Afficher la page  des  Composants
-    public final function page ()
+    public final function index ()
     {
 
-        try {
-            $composants = $this->composantRepository->liste();
 
-            return view('admin.composant.index',  compact('composants'));
-        } catch (Exception $e) {
-            return response()->json(['message' => 'Erreur lors du chargement des Composants.'], 500);
-        }
+            $composants = $this->composantRepository->liste();
+            return view('composant.page',  compact('composants'));
+
 
 
     }
@@ -40,8 +37,7 @@ class ComposantController extends Controller
     {
         try {
             $data = $request->validated();
-
-            $composant = $this->__constructomposantRepository->ajouter($data);
+            $composant = $this->composantRepository->ajouter($data);
             return response()->json([
                 'message' => 'Composant créé avec succès.',
                 'data' => $composant
@@ -55,15 +51,14 @@ class ComposantController extends Controller
     {
         try {
 
-            $composant = $this->composantRepository->rechercher($id);
+            $Composant = $this->composantRepository->rechercher($id);
 
-            if (!$composant) {
+            if (!$Composant) {
                 return response()->json(['message' => 'Composant non trouvé.'], 404);
             }
-            return response()->json($composant);
-
+            return response()->json($Composant);
         } catch (Exception $e) {
-            return response()->json(['message' => 'Erreur lors de la récupération du composant.'], 500);
+            return response()->json(['message' => 'Erreur lors de la récupération du Composant.'], 500);
         }
     }
 
@@ -73,15 +68,13 @@ class ComposantController extends Controller
             $data = $request->validated();
             $composant = $this->composantRepository->modifier($id, $data);
             return response()->json([
-
                 'message' => 'Composant mis à jour avec succès.',
-
-                'data' => $Composant
+                'data' => $composant
             ]);
         } catch (ModelNotFoundException $e) {
             return response()->json(['message' => 'Composant non trouvé.'], 404);
         } catch (Exception $e) {
-            return response()->json(['message' => 'Erreur lors de la mise à jour du Composant.'], 500);
+            return response()->json(['message' => 'Erreur lors de la mise à jour d Composant.'], 500);
         }
     }
 

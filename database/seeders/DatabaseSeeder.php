@@ -22,9 +22,11 @@ class DatabaseSeeder extends Seeder
             ComposantSeeder::class,
             ActiviteSeeder::class,
             AnneeSeeder::class,
-            EntreeSeeder::class,
-            DecaissementSeeder::class,
+            HistoriqueSeeder::class,
+            BailleurSeeder::class,
             OperationSeeder::class,
+            FinancementSeeder::class,
+            ProjetSeeder::class,
         ]);
     }
 }

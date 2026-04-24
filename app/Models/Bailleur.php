@@ -9,7 +9,7 @@ class Bailleur extends Model
 {
     use HasFactory;
 
-    protected $table = 'operations';
+    protected $table = 'bailleurs';
 
     protected $fillable = [
         'code',
@@ -18,8 +18,8 @@ class Bailleur extends Model
         'nom',
         'email',
         'utilisateur_id',
-     
-      
+
+
         'etat',
     ];
 
@@ -32,5 +32,5 @@ class Bailleur extends Model
         return $this->belongsTo(Utilisateur::class, 'utilisateur_id');
     }
 
-   
+
 }

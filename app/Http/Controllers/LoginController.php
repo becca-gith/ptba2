@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Projet;
+use App\Types\TypeStatus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -12,7 +14,10 @@ class LoginController extends Controller
 {
     public function showLoginForm()
     {
-        return view('login.page');
+
+        $projets = Projet::where('etat', TypeStatus::ACTIF)->get();
+
+        return view('login.page', compact('projets'));
     }
 
 

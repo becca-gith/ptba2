@@ -26,7 +26,7 @@ class ActiviteController extends Controller
 
         try {
             $activites = $this->activiteRepository->liste();
-            return view('admin.activite.index',  compact('activites'));
+            return view('activite.page',  compact('activites'));
         } catch (Exception $e) {
             return response()->json(['message' => 'Erreur lors du chargement des activites.'], 500);
         }

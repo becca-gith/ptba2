@@ -17,7 +17,12 @@ class AnneeFactory extends Factory
     public function definition(): array
     {
         return [
-            'libelle' => $this->faker->year(), // exemple : 2025
+            'libelle' => $this->faker->unique()->randomElement([
+                '2022-2023',
+                '2023-2024',
+                '2024-2025',
+                '2025-2026',
+            ]),
             'etat' => $this->faker->randomElement([0, 1]),
         ];
     }

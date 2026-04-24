@@ -36,9 +36,7 @@
                     <a data-bs-toggle="tooltip" data-bs-placement="top" title="Excel"><img src="{{asset('app')}}/assets/img/icons/excel.svg" alt="img"></a>
                 </li>
             </ul>
-            <div class="page-btn">
-                <a href="#" class="btn btn-primary" id="lancerOperation"><i class="ti ti-circle-plus me-1"></i>Ajouter </a>
-            </div>
+
         </div>
 
         @include('operation.partial.liste')

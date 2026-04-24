@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UtilisateurRequest;
 use App\Http\Requests\LoginRequest;
+use App\Models\Projet;
 use App\Repositories\Interfaces\UtilisateurRepositoryInterface;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -97,39 +98,54 @@ class UtilisateurController extends Controller
     }
 
 
-public function login(LoginRequest $request)
-{
-    $credentials = $request->only('login_utilisateur', 'mot_passe');
+    public function login(LoginRequest $request)
+    {
+        $credentials = $request->only('login_utilisateur', 'mot_passe');
+        $typeProjet = $request->input('type_projet');
 
-    $result = $this->utilisateurRepository->authenticate($credentials);
+        // Authentification via repository
+        $result = $this->utilisateurRepository->authenticate($credentials);
 
-    // Stockage en session uniquement si succès
-    if ($result['success'] && isset($result['compte'])) {
-        Session::put('LoginUser', $result['compte']);
+        // Si authentification réussie
+        if ($result['success'] && isset($result['compte'])) {
+
+            // Stockage du compte utilisateur
+            Session::put('LoginUser', $result['compte']);
+
+            // ✅ Récupérer le projet
+            $projet = Projet::find($typeProjet);
+
+            // ✅ Stocker l’ID + le libellé dans la session
+            Session::put('ProjetActif', [
+                'id'      => $projet->id,
+                'libelle' => $projet->libelle
+            ]);
+
+            return response()->json([
+                'success' => true,
+                'message' => $result['message'],
+                'compte'  => $result['compte'],
+                'projet'  => $projet->libelle,
+                'code'    => $result['code'] ?? 'LOGIN_SUCCESS',
+            ]);
+        }
+
+        // Déterminer le code HTTP en fonction de l’erreur
+        $httpStatus = match($result['code'] ?? '') {
+            'MISSING_FIELDS', 'EMPTY_FIELDS' => 422,
+            'USER_NOT_FOUND', 'INVALID_PASSWORD' => 401,
+            'ACCOUNT_DELETED', 'ACCOUNT_INACTIVE', 'ACCOUNT_BLOCKED' => 403,
+            'SERVER_ERROR' => 500,
+            default => 400,
+        };
 
         return response()->json([
-            'success' => true,
-            'message' => $result['message'],
-            'compte'  => $result['compte'],
-            'code'    => $result['code'] ?? 'LOGIN_SUCCESS',
-        ]);
+            'success' => false,
+            'message' => $result['message'] ?? 'Une erreur est survenue.',
+            'code'    => $result['code'] ?? 'UNKNOWN_ERROR',
+        ], $httpStatus);
     }
 
-    // Déterminer le code HTTP en fonction du code renvoyé par le repository
-    $httpStatus = match($result['code'] ?? '') {
-        'MISSING_FIELDS', 'EMPTY_FIELDS' => 422,
-        'USER_NOT_FOUND', 'INVALID_PASSWORD' => 401,
-        'ACCOUNT_DELETED', 'ACCOUNT_INACTIVE', 'ACCOUNT_BLOCKED' => 403,
-        'SERVER_ERROR' => 500,
-        default => 400,
-    };
-
-    return response()->json([
-        'success' => false,
-        'message' => $result['message'] ?? 'Une erreur est survenue.',
-        'code'    => $result['code'] ?? 'UNKNOWN_ERROR',
-    ], $httpStatus);
-}
 
 
 }

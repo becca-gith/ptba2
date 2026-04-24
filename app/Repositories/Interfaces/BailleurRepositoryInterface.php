@@ -3,7 +3,7 @@
 namespace App\Repositories\Interfaces;
 use App\Repositories\Interfaces\BaseRepositoryInterface;
 
-interface DecaissementRepositoryInterface extends BaseRepositoryInterface
+interface BailleurRepositoryInterface extends BaseRepositoryInterface
 {
 
 

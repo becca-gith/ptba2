@@ -2,14 +2,14 @@
 
 
 use App\Http\Controllers\AnneeController;
+use App\Http\Controllers\BailleurController;
 use App\Http\Controllers\PtbaController;
 use App\Http\Controllers\UtilisateurController;
-use App\Http\Controllers\ComposantController;
 use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\OperationController;
-use App\Http\Controllers\DecaissementController;
-use App\Http\Controllers\EntreeController;
 use App\Http\Controllers\TableauController;
+use App\Http\Controllers\ComposantController;
 
 
 
@@ -51,11 +51,13 @@ Route::post('/utilisateurs/delete/{id}', [UtilisateurController::class, 'destroy
 
 // 📂 Composants
 
-Route::get('/composants/index', [ComposantController::class, 'index'])->name('admin_composant_index');
-Route::post('/composants/save', [ComposantController::class, 'store'])->name('admin_composant_store');
-Route::get('/composants/modifier/{id}', [ComposantController::class, 'show'])->name('admin_composant_edit');
-Route::post('/composants/update/{id}', [ComposantController::class, 'update'])->name('admin_composant_update');
-Route::post('/composants/delete/{id}', [ComposantController::class, 'destroy'])->name('admin_composant_delete');
+
+    Route::get('/composants/index', [ComposantController::class, 'index'])->name('admin_composant_index');
+    Route::post('/composants/save', [ComposantController::class, 'store'])->name('admin_composant_store');
+    Route::get('/composants/modifier/{id}', [ComposantController::class, 'show'])->name('admin_composant_edit');
+    Route::post('/composants/update/{id}', [ComposantController::class, 'update'])->name('admin_composant_update');
+    Route::post('/composants/delete/{id}', [ComposantController::class, 'destroy'])->name('admin_composant_delete');
+
 
 
 // 📂 Activites
@@ -76,23 +78,33 @@ Route::get('/operations/modifier/{id}', [OperationController::class, 'show'])->n
 Route::post('/operations/update/{id}', [OperationController::class, 'update'])->name('admin_operation_update');
 Route::post('/operations/delete/{id}', [OperationController::class, 'destroy'])->name('admin_operation_delete');
 
-// 📂 Decaissements
 
-Route::get('/decaissements/index', [DecaissementController::class, 'index'])->name('admin_decaissement_index');
-Route::post('/decaissements/save', [DecaissementController::class, 'store'])->name('admin_decaissement_store');
-Route::get('/decaissements/modifier/{id}', [DecaissementController::class, 'show'])->name('admin_decaissement_edit');
-Route::post('/decaissements/update/{id}', [DecaissementController::class, 'update'])->name('admin_decaissement_update');
-Route::post('/decaissements/delete/{id}', [DecaissementController::class, 'destroy'])->name('admin_decaissement_delete');
+// 📂 Bailleurs
+
+    Route::get('/bailleurs/index', [BailleurController::class, 'index'])->name('admin_bailleur_index');
+    Route::post('/bailleurs/save', [BailleurController::class, 'store'])->name('admin_bailleur_store');
+    Route::get('/bailleurs/modifier/{id}', [BailleurController::class, 'show'])->name('admin_bailleur_edit');
+    Route::post('/bailleurs/update/{id}', [BailleurController::class, 'update'])->name('admin_bailleur_update');
+    Route::post('/bailleurs/delete/{id}', [BailleurController::class, 'destroy'])->name('admin_bailleur_delete');
 
 
-// 📂 Entrées
+// 📂 Projets
 
-Route::get('/entrees/index', [EntreeController::class, 'index'])->name('admin_entree_index');
-Route::post('/entrees/save', [EntreeController::class, 'store'])->name('admin_entree_store');
-Route::get('/entrees/modifier/{id}', [EntreeController::class, 'show'])->name('admin_entree_edit');
-Route::post('/entrees/update/{id}', [EntreeController::class, 'update'])->name('admin_entree_update');
-Route::post('/entrees/delete/{id}', [EntreeController::class, 'destroy'])->name('admin_entree_delete');
 
+    Route::get('/projets/index', [ProjetController::class, 'index'])->name('admin_projet_index');
+    Route::post('/projets/save', [ProjetController::class, 'store'])->name('admin_projet_store');
+    Route::get('/projets/modifier/{id}', [ProjetController::class, 'show'])->name('admin_projet_edit');
+    Route::post('/projets/update/{id}', [ProjetController::class, 'update'])->name('admin_projet_update');
+    Route::post('/projets/delete/{id}', [ProjetController::class, 'destroy'])->name('admin_projet_delete');
+
+
+// 📂 Historiques
+
+    Route::get('/historiques/index', [HistoriqueController::class, 'index'])->name('admin_historique_index');
+    Route::post('/historiques/save', [HistoriqueController::class, 'store'])->name('admin_historique_store');
+    Route::get('/historiques/modifier/{id}', [HistoriqueController::class, 'show'])->name('admin_historique_edit');
+    Route::post('/historiques/update/{id}', [HistoriqueController::class, 'update'])->name('admin_historique_update');
+    Route::post('/historiques/delete/{id}', [HistoriqueController::class, 'destroy'])->name('admin_historique_delete');
 
 
 });

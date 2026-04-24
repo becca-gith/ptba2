@@ -23,6 +23,7 @@ class LoginRequest extends FormRequest
         return [
             'login_utilisateur'    => 'required',
             'mot_passe' => 'required',
+            'type_projet' => 'required|exists:projets,id',
         ];
     }
 
@@ -34,6 +35,8 @@ class LoginRequest extends FormRequest
         return [
             'login_utilisateur.required'    => 'Le login  est obligatoire.',
             'mot_passe.required' => 'Le mot de passe est obligatoire.',
+            'type_projet.required' => "Veuillez sélectionner un projet.",
+            'type_projet.exists'   => "Projet invalide.",
 
         ];
     }

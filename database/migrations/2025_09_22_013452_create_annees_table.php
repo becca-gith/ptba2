@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('annees', function (Blueprint $table) {
             $table->id();
             $table->string('libelle')->nullable();
+            $table->integer('statut')->default(1);
 
             $table->integer('etat')->default(1);
             $table->timestamps();

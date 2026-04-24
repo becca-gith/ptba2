@@ -12,12 +12,17 @@ class OperationFactory extends Factory
     public function definition()
     {
         return [
-            'libelle'        => $this->faker->sentence(3), // Exemple : "Paiement facture école"
-            'statut'         => $this->faker->numberBetween(0, 2), // Exemple: 0 = en attente, 1 = validée, 2 = rejetée
-            'date_operation' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'activite_id'    => \App\Models\Activite::factory(), // relation si Activite existe
-            'utilisateur_id' => \App\Models\Utilisateur::factory(), // relation si Utilisateur existe
-            'etat'           => 1, // actif par défaut
+            'libelle' => $this->faker->sentence(3),
+            'montant' => $this->faker->randomFloat(2, 10000, 500000),
+            'statut' => $this->faker->randomElement([0, 1, 2]), // ex: 0=En attente, 1=Validé, 2=Rejeté
+            'justificatif' => $this->faker->imageUrl(640, 480, 'business', true),
+            'date_operation' => $this->faker->date(),
+
+            // clés étrangères (à adapter selon ce que tu as déjà en BD)
+            'activite_id' => $this->faker->numberBetween(1, 5),
+            'utilisateur_id' => $this->faker->numberBetween(1, 5),
+
+            'etat' => $this->faker->randomElement([0, 1]),
         ];
     }
 }

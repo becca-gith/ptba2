@@ -17,12 +17,15 @@ class ActiviteFactory extends Factory
     public function definition(): array
     {
         return [
+            'code' => $this->faker->unique()->bothify('ACT-###'),
             'libelle' => $this->faker->sentence(3),
-            'montant' => $this->faker->randomFloat(2, 500, 200000),
-            'ptba_id' => $this->faker->numberBetween(1, 5),       // lié à ptbas
-            'composant_id' => $this->faker->numberBetween(1, 10), // lié à composants
-            'utilisateur_id' => $this->faker->numberBetween(1, 10), // lié à utilisateurs
-            'etat' => 1,
+            'cout' => $this->faker->randomFloat(2, 50000, 2000000),
+
+            'ptba_id' => $this->faker->numberBetween(1, 5),
+            'composant_id' => $this->faker->numberBetween(1, 5),
+            'utilisateur_id' => $this->faker->numberBetween(1, 5),
+
+            'etat' => $this->faker->randomElement([0, 1]),
         ];
     }
 }

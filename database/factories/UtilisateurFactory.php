@@ -21,9 +21,11 @@ class UtilisateurFactory extends Factory
             'nom_prenom' => $this->faker->name(),
             'login_utilisateur' => $this->faker->unique()->userName(),
             'telephone' => $this->faker->phoneNumber(),
-            'mot_passe' => bcrypt('password'), // mot de passe par défaut hashé
-            'role' => $this->faker->numberBetween(1, 3), // adapte selon tes rôles
-            'etat' => 1,
+            'mot_passe' => bcrypt('password'), // mot de passe par défaut
+
+            'role' => $this->faker->randomElement([0, 1, 2]), // ex: 0=admin, 1=enseignant, 2=secretaire
+
+            'etat' => $this->faker->randomElement([0, 1]),
         ];
     }
 }

@@ -18,7 +18,7 @@ return new class extends Migration
 
              $table->string('code')->nullable();
              $table->string('libelle')->nullable();
-             $table->float('cout')->nullable();
+            $table->decimal('cout', 15, 2)->nullable(); // <-- correction ici
             $table->bigInteger('ptba_id')->nullable();
             $table->bigInteger('composant_id')->nullable();
              $table->bigInteger('utilisateur_id')->nullable();

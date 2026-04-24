@@ -5,7 +5,7 @@ namespace App\Types;
 class TypePtba
 {
     const SUR_PROJET  = 1;
-    const HORS_PROJET = 2;
+    const HORS_PIP = 2;
 
     /**
      * Retourne tous les roles 
@@ -15,7 +15,7 @@ class TypePtba
     {
         return [
             self::SUR_PROJET => 'Sur projet',
-            self::HORS_PROJET => 'Hors projet',
+            self::HORS_PIP => 'Hors PIP',
         ];
     }
 

@@ -14,7 +14,7 @@ class ComposantFactory extends Factory
         return [
             'libelle'        => $this->faker->words(3, true),   // Exemple : "Projet Développement A"
             'ptba_id'        => \App\Models\Ptba::factory(),    // Relation si tu as un modèle Ptba
-            'montant'        => $this->faker->randomFloat(2, 1000, 100000), // Montant aléatoire
+            'financement'        => $this->faker->randomFloat(2, 1000, 100000), // Montant aléatoire
             'utilisateur_id' => \App\Models\Utilisateur::factory(), // Relation si tu as un modèle Utilisateur
             'etat'           => 1, // Actif par défaut
         ];

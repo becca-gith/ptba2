@@ -13,6 +13,10 @@ jQuery(document).ready(function() {
             mot_passe: {
                 required: true,
                 maxlength: 100
+            },
+            type_projet: {
+                required: true,
+                digits: true // si la valeur est l'id du projet
             }
         },
         messages: {
@@ -23,6 +27,9 @@ jQuery(document).ready(function() {
             mot_passe: {
                 required: "Le mot de passe est requis.",
                 maxlength: "Le mot de passe est trop long."
+            },
+            type_projet: {
+                required: "Veuillez sélectionner un projet."
             }
         },
         invalidHandler: function(event, validator) {
@@ -54,7 +61,12 @@ function clearData() {
 function authentifier() {
     let form = document.getElementById('form-login');
     let formData = new FormData(form);
-    
+
+    // Sécurité supplémentaire : champ obligatoire
+    if (!formData.get('type_projet')) {
+        toastr.error("Veuillez choisir un projet.");
+        return;
+    }
 
     $.ajax({
         type: 'POST',
@@ -68,6 +80,7 @@ function authentifier() {
 
             if (data.success) {
                 notifierSuccesEtRecharger(data.message);
+
                 if (data.compte && data.compte.id) {
                     setTimeout(() => {
                         window.location.href = '/';
@@ -76,6 +89,9 @@ function authentifier() {
             } else {
                 // ✅ gestion par code d’erreur spécifique
                 switch (data.code) {
+                    case "NO_PROJECT":
+                        toastr.error("Veuillez sélectionner un projet valide.");
+                        break;
                     case "MISSING_FIELDS":
                         toastr.error("Veuillez remplir tous les champs.");
                         break;
@@ -112,7 +128,7 @@ function authentifier() {
     });
 }
 
-// Gestion des erreurs ajax (erreurs validation Laravel par ex.)
+// Gestion des erreurs ajax
 function handleAjaxError(xhr) {
     if (xhr.status === 422) {
         let errors = xhr.responseJSON.errors;

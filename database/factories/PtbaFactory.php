@@ -14,10 +14,10 @@ class PtbaFactory extends Factory
     public function definition(): array
     {
         return [
-            'libelle' => $this->faker->sentence(3),
-            'annee_id' => $this->faker->numberBetween(1, 5),
-            'type' => $this->faker->numberBetween(0, 3),
-            'utilisateur_id' => $this->faker->numberBetween(1, 10),
+
+            'annee_id' => $this->faker->numberBetween(1, 3),
+            'projet_id' => $this->faker->numberBetween(0, 3),
+            'utilisateur_id' => $this->faker->numberBetween(1, 4),
             'etat' => 1,
         ];
     }
