@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\HorspipController;  // ← ajouter cette ligne
 use App\Http\Controllers\AnneeController;
 use App\Http\Controllers\BailleurController;
 use App\Http\Controllers\PtbaController;
@@ -40,6 +40,13 @@ Route::get('/ptbas/modifier/{id}', [PtbaController::class, 'show'])->name('admin
 Route::post('/ptbas/update/{id}', [PtbaController::class, 'update'])->name('admin_ptba_update');
 Route::post('/ptbas/delete/{id}', [PtbaController::class, 'destroy'])->name('admin_ptba_delete');
 
+// 📂 Hors PIP - corrigé
+Route::get('/horspips/index', [HorspipController::class, 'index'])->name('admin_pip_index');
+Route::get('/horspips/create', [HorspipController::class, 'create'])->name('admin_pip_create');
+Route::post('/horspips/save', [HorspipController::class, 'store'])->name('admin_pip_store');
+Route::get('/horspips/modifier/{id}', [HorspipController::class, 'show'])->name('admin_pip_edit');
+Route::post('/horspips/update/{id}', [HorspipController::class, 'update'])->name('admin_pip_update');
+Route::post('/horspips/delete/{id}', [HorspipController::class, 'destroy'])->name('admin_pip_delete');
 
 // 📂 Utilisateurs
 

@@ -22,7 +22,14 @@
                     </a>
                 </li>
 
-               
+               <!-- HORS PIP -->
+                <li class="{{ request()->is('ptbas*') ? 'active-menu' : '' }}">
+                    <a href="{{ url('/horspips/index') }}">
+                        <i class="ti ti-list-details fs-16 me-2"></i>
+                        <span>HORS PIP</span>
+                    </a>
+                </li>
+
                 <!-- ACTIVITES -->
                 <li class="{{ request()->is('activites*') ? 'active-menu' : '' }}">
                     <a href="{{ url('/activites/index') }}">

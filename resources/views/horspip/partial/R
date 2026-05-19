@@ -1,0 +1,1063 @@
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-primary bg-opacity-10">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <button class="nav-link active text-dark fw-bold" data-bs-toggle="tab" data-bs-target="#horspip2024">HORS PIP 2026</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-body tab-content">
+        <div class="tab-pane fade show active" id="horspip2024">
+
+            <!-- ================= HORS PIP ================= -->
+            <div class="p-3 mb-3 rounded bg-primary bg-opacity-10 border-start border-4 border-primary shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-bold text-dark">
+                        <i class="ti ti-folder me-2"></i> MONTANT AFFECTER <span class="text-muted">2026</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 20 000 000</span>
+                        <span class="badge bg-info">Engagé : 10 000 000</span>
+                        <span class="badge bg-success">Décaisse : 6 000 000</span>
+                        <span class="badge bg-dark">Disponible : 4 000 000</span>
+                        <button class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter composant</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression Hors PIP -->
+                   <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" style="width: 52%;">52%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= COMPOSANT 1 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp1" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> FOURNITURE DE PAPIERS ET ARTICLES LIES
+                        <small class="ms-2 badge bg-secondary">4 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 4 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 900 000</span>
+                        <span class="badge bg-success">Décaisse : 2 500 000</span>
+                        <span class="badge bg-dark">Disponible : 2 000 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression Composant -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" style="width: 65%;">65%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp1">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat de climatiseur</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 500 000</span>
+                            <span class="badge bg-info">Engagé : 1 000 000</span>
+                            <span class="badge bg-success">Décaisse : 900 000</span>
+                            <span class="badge bg-dark">Disponible : 600 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Plomberie</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 000 000</span>
+                            <span class="badge bg-info">Engagé : 700 000</span>
+                            <span class="badge bg-success">Décaisse : 700 000</span>
+                            <span class="badge bg-dark">Disponible : 300 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> achat de produit nettoyant</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 500 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 500 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 4 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat de fourniture</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 500 000</span>
+                            <span class="badge bg-info">Engagé : 1 000 000</span>
+                            <span class="badge bg-success">Décaisse : 900 000</span>
+                            <span class="badge bg-dark">Disponible : 600 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= COMPOSANT 2 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp1" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> Fournitures de petits matériel de bureau, de produits d’entretien et de charroi
+                        <small class="ms-2 badge bg-secondary">4 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 4 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 900 000</span>
+                        <span class="badge bg-success">Décaisse : 2 500 000</span>
+                        <span class="badge bg-dark">Disponible : 2 000 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression Composant -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" style="width: 65%;">65%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp1">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat de climatiseur</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 500 000</span>
+                            <span class="badge bg-info">Engagé : 1 000 000</span>
+                            <span class="badge bg-success">Décaisse : 900 000</span>
+                            <span class="badge bg-dark">Disponible : 600 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Plomberie</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 000 000</span>
+                            <span class="badge bg-info">Engagé : 700 000</span>
+                            <span class="badge bg-success">Décaisse : 700 000</span>
+                            <span class="badge bg-dark">Disponible : 300 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> achat de produit nettoyant</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 500 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 500 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 4 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat de fourniture</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 1 500 000</span>
+                            <span class="badge bg-info">Engagé : 1 000 000</span>
+                            <span class="badge bg-success">Décaisse : 900 000</span>
+                            <span class="badge bg-dark">Disponible : 600 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= COMPOSANT 3 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> FOURNITURE INFORMATIQUES
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= COMPOSANT 4 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> FOURNITURE DE CARBURANT ET LUBRIFIANT
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- ================= COMPOSANT 5 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> Frais d’alimentation 
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- ================= COMPOSANT 6 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> ENTRETIEN ET MAINTENANCE DES BATIMENTS ADMINISTRATIFS A USAGE DE BUREAU
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= COMPOSANT 7 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> Entretien et maintenance du mobilier et matériel de bureau
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= COMPOSANT 8 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> Entretien et maintenance du matériel informatique 
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= COMPOSANT 9 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> Entretien et maintenance des véhicules administratifs et de fonction
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- ================= COMPOSANT 10 ================= -->
+            <div class="p-2 border rounded mb-2 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fw-semibold d-flex align-items-center">
+                        <i class="ti ti-chevron-right rotate me-2" data-bs-target="#horspip-comp2" data-bs-toggle="collapse"></i>
+                        <i class="ti ti-puzzle text-primary me-2"></i> Frais d'impression
+                        <small class="ms-2 badge bg-secondary">3 activités</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Total : 6 000 000</span>
+                        <span class="badge bg-info">Engagé : 3 200 000</span>
+                        <span class="badge bg-success">Décaisse : 2 600 000</span>
+                        <span class="badge bg-dark">Disponible : 3 400 000</span>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="ti ti-settings me-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">Modifier</a></li>
+                            <li><a href="#" class="dropdown-item">Ajouter activité</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Supprimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Barre progression -->
+                <div class="mt-2">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 43%;">43%</div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITES -->
+                <div class="collapse mt-2" id="horspip-comp2">
+
+                    <!-- ACT 1 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Achat semences</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 2 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Irrigation</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 1 200 000</span>
+                            <span class="badge bg-success">Décaisse : 1 000 000</span>
+                            <span class="badge bg-dark">Disponible : 1 000 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACT 3 -->
+                    <div class="ms-4 mb-2 p-2 border rounded bg-white d-flex justify-content-between align-items-center shadow-sm">
+                        <div><i class="ti ti-circle-filled text-secondary me-2"></i> Distribution outils</div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-primary">Total : 2 000 000</span>
+                            <span class="badge bg-info">Engagé : 800 000</span>
+                            <span class="badge bg-success">Décaisse : 800 000</span>
+                            <span class="badge bg-dark">Disponible : 1 200 000</span>
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item">Voir détail</a></li>
+                                <li><a class="dropdown-item">Modifier</a></li>
+                                <li><a class="dropdown-item">Engager</a></li>
+                                <li><a class="dropdown-item">Ordonnancer</a></li>
+                                <li><a class="dropdown-item">Décaisser</a></li>
+                                <li><a class="dropdown-item text-danger">Supprimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll(".rotate").forEach(el => {
+        el.addEventListener("click", function(){
+            el.classList.toggle("open");
+        });
+    });
+</script>
