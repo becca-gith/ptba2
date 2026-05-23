@@ -16,8 +16,6 @@ class Financement extends Model
         'bailleur_id',
         'activite_id',
 
-
-
         'etat',
     ];
 

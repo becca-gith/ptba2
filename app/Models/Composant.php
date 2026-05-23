@@ -15,7 +15,7 @@ class Composant extends Model
         'libelle',
         'ptba_id',
         'financement',
-        'utilisateur_id',
+        'user_id',
         'etat',
     ];
 
@@ -32,6 +32,6 @@ class Composant extends Model
      */
     public function utilisateur()
     {
-        return $this->belongsTo(Utilisateur::class, 'utilisateur_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

@@ -23,7 +23,7 @@ return new class extends Migration
              $table->date('date_operation')->nullable();
               $table->bigInteger('activite_id')->nullable();
 
-             $table->bigInteger('utilisateur_id')->nullable();
+             $table->bigInteger('user_id')->nullable();
 
             $table->integer('etat')->default(1);
             $table->timestamps();

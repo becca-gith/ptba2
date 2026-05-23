@@ -17,7 +17,7 @@ class Bailleur extends Model
         'sigle',
         'nom',
         'email',
-        'utilisateur_id',
+        'user_id',
 
 
         'etat',
@@ -29,7 +29,7 @@ class Bailleur extends Model
      */
     public function utilisateur()
     {
-        return $this->belongsTo(Utilisateur::class, 'utilisateur_id');
+        return $this->belongsTo(Utilisateur::class, 'user_id');
     }
 
 

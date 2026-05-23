@@ -17,7 +17,7 @@ class Activite extends Model
         'cout',
         'ptba_id',
         'composant_id',
-        'utilisateur_id',
+        'user_id',
         'etat',
     ];
 
@@ -42,6 +42,6 @@ class Activite extends Model
      */
     public function utilisateur()
     {
-        return $this->belongsTo(Utilisateur::class, 'utilisateur_id');
+        return $this->belongsTo(User::class, 'utilisateur_id');
     }
 }

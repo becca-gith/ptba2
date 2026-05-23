@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
 class Ptba extends Model
 {
     use HasFactory;
@@ -13,41 +12,40 @@ class Ptba extends Model
     protected $table = 'ptbas';
 
     protected $fillable = [
-
         'annee_id',
         'projet_id',
         'cout',
-
-        'utilisateur_id',
+        'user_id',
         'etat',
     ];
 
-    /**
-     * 🔗 Relation avec l'année
-     */
+    // Relation avec l'année
     public function annee()
     {
-        return $this->belongsTo(Annee::class, 'annee_id');
+        return $this->belongsTo(Annee::class);
     }
 
-    /**
-     * 🔗 Relation avec l’utilisateur
-     */
-    public function utilisateur()
+    // Relation avec le projet
+    public function projet()
     {
-        return $this->belongsTo(IUtilisateur::class, 'utilisateur_id');
-        // ⚠️ Si ton modèle utilisateur s’appelle User → change IUtilisateur par User
+        return $this->belongsTo(Projet::class);
     }
 
-    // ✅ Relation : un PTBA a plusieurs composants
+    // Relation avec l'utilisateur (créateur/responsable)
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Un PTBA peut avoir plusieurs composants
     public function composants()
     {
-        return $this->hasMany(Composant::class, 'ptba_id');
+        return $this->hasMany(Composant::class);
     }
 
-    // ✅ Relation : un PTBA a plusieurs activités
+    // Un PTBA peut avoir plusieurs activités
     public function activites()
     {
-        return $this->hasMany(Activite::class, 'ptba_id');
+        return $this->hasMany(Activite::class);
     }
 }

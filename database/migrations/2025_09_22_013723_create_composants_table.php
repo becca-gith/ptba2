@@ -19,8 +19,8 @@ return new class extends Migration
 
              $table->string('libelle')->nullable();
             $table->bigInteger('ptba_id')->nullable();
-             $table->float('financement')->nullable();
-             $table->bigInteger('utilisateur_id')->nullable();
+            $table->decimal('financement', 15, 2)->nullable();
+             $table->bigInteger('user_id')->nullable();
 
             $table->integer('etat')->default(1);
             $table->timestamps();

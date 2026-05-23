@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bailleurs', function (Blueprint $table) {
+        Schema::create('depenses', function (Blueprint $table) {
             $table->id();
-
-            $table->string('code')->nullable();
-            $table->string('logo')->nullable();
-            $table->string('sigle')->nullable();
-            $table->string('nom')->nullable();
-            $table->string('email')->nullable();
-
+            $table->string('motif')->nullable();
+            $table->decimal('montant', 15, 2)->nullable();
+            $table->date('date_depense')->nullable();
+            $table->bigInteger('annee_id')->nullable();
+            $table->bigInteger('ligne_id')->nullable();
+            $table->string('piece_justificatif')->nullable();
             $table->bigInteger('user_id')->nullable();
 
             $table->integer('etat')->default(1);
@@ -36,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bailleurs');
+        Schema::dropIfExists('depenses');
     }
 };

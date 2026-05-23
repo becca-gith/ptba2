@@ -20,7 +20,7 @@ return new class extends Migration
             $table->bigInteger('annee_id')->nullable();
             $table->bigInteger('projet_id')->nullable();
             $table->decimal('cout', 15, 2)->nullable(); // <-- correction ici
-             $table->bigInteger('utilisateur_id')->nullable();
+             $table->bigInteger('user_id')->nullable();
             $table->integer('etat')->default(1);
 
             $table->timestamps();

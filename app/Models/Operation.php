@@ -17,8 +17,8 @@ class Operation extends Model
         'statut',
         'justificatif',
         'date_operation',
-        'utilisateur_id',
-        'utilisateur_id',
+        'user_id',
+
         'etat',
     ];
 
@@ -33,8 +33,8 @@ class Operation extends Model
     /**
      * 🔗 Relation avec l’Utilisateur
      */
-    public function utilisateur()
+    public function user()
     {
-        return $this->belongsTo(Utilisateur::class, 'utilisateur_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

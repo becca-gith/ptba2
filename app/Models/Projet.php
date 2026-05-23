@@ -14,9 +14,12 @@ class Projet extends Model
     protected $fillable = [
         'libelle',
         'description',
-
         'etat',
     ];
 
-
+    // Relation avec Ptba (un projet peut avoir plusieurs PTBAs)
+    public function ptbas()
+    {
+        return $this->hasMany(Ptba::class);
+    }
 }

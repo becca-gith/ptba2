@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('cout', 15, 2)->nullable(); // <-- correction ici
             $table->bigInteger('ptba_id')->nullable();
             $table->bigInteger('composant_id')->nullable();
-             $table->bigInteger('utilisateur_id')->nullable();
+             $table->bigInteger('user_id')->nullable();
 
             $table->integer('etat')->default(1);
             $table->timestamps();

@@ -24,9 +24,9 @@ class Historique extends Model
     /**
      * 🔗 Relation avec l’Utilisateur
      */
-    public function utilisateur()
+    public function user()
     {
-        return $this->belongsTo(Utilisateur::class, 'utilisateur_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
 

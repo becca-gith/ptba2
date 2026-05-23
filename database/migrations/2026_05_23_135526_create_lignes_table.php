@@ -13,18 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('utilisateurs', function (Blueprint $table) {
+        Schema::create('lignes', function (Blueprint $table) {
+
             $table->id();
-
-            $table->string('nom_prenom')->nullable();
-            $table->string('login_utilisateur')->nullable();
-            $table->string('telephone')->nullable();
-            $table->string('mot_passe')->nullable();
-            $table->tinyInteger('role')->nullable();
-
-
+            $table->string('libelle')->nullable();
+            $table->decimal('prevision', 15, 2)->nullable();
+            $table->tinyInteger('taux_autorisation')->nullable();
+            $table->bigInteger('annee_id')->nullable();
+            $table->bigInteger('user_id')->nullable();
             $table->integer('etat')->default(1);
-
             $table->timestamps();
         });
     }
@@ -36,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('utilisateurs');
+        Schema::dropIfExists('lignes');
     }
 };

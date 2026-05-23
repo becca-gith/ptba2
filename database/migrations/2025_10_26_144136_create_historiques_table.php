@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string ('libelle')->nullable();
             $table->dateTime('heure_action')->nullable();
-            $table->bigInteger('utilisateur_id')->nullable();
+            $table->bigInteger('user_id')->nullable();
             $table->integer('etat')->default(1);
             $table->timestamps();
         });
